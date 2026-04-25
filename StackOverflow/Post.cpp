@@ -8,7 +8,7 @@
 
 using namespace std;
 
-Post::Post(string postId, string userId, string content, vector<string> &tags, PostType type)
+Post::Post(string postId, string userId, string content, const vector<string> &tags, PostType type)
     : postId(postId), userId(userId), content(content), tags(tags), type(type), score(0), accepted(false)
 {
     timestamp = time(nullptr);
@@ -37,7 +37,7 @@ void Post::addComment(Comment *Comment)
     comments.push_back(Comment);
 }
 
-bool Post::addVote(string &userId)
+bool Post::addVote(const string &userId)
 {
     if (find(votes.begin(), votes.end(), userId) == votes.end())
     {

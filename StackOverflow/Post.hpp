@@ -31,7 +31,7 @@ private:
     time_t timestamp;
 
 public:
-    Post(string postId, string userId, string content, vector<string> &tags, PostType type);
+    Post(string postId, string userId, string content, const vector<string> &tags, PostType type);
     ~Post();
 
     string getPostId() const;
@@ -45,8 +45,8 @@ public:
     time_t getTime() const;
 
     void addComment(Comment *comment);
-    bool addVote(string &userId);
-    bool removeVote(string &userId);
+    bool addVote(const string &userId);
+    bool removeVote(const string &userId);
     void setAccepted(bool status);
     void displayInfo() const;
 };

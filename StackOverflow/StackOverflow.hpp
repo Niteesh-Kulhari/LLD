@@ -44,8 +44,8 @@ public:
     void displayAllQuestion() const;
 
 private:
-    User *findUser(string &userId) const;
-    Post *findPost(string &postId) const;
+    User *findUser(const string &userId) const;
+    Post *findPost(const string &postId) const;
     void updateUserReputation(const string &userId, int points);
     string generateUserId();
     string generatePostId();
