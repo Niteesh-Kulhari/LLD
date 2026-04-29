@@ -35,7 +35,7 @@ public:
     // Voting Management
     bool votePost(const string &userId, const string &postId);
     bool unvotePost(const string &userId, const string &postId);
-    bool acceptAnswer(const string &useId, const string &answerId);
+    bool acceptAnswer(const string &userId, const string &answerId);
 
     // Search and Display
     vector<Post *> searchQuestion(const string &tag) const;

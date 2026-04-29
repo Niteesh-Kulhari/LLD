@@ -49,7 +49,7 @@ bool Post::addVote(const string &userId)
     return false;
 }
 
-bool Post::removeVote(string &userId)
+bool Post::removeVote(const string &userId)
 {
     auto it = find(votes.begin(), votes.end(), userId);
     if (it != votes.end())
